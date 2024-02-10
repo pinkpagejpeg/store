@@ -58,7 +58,7 @@ Detail.belongsTo(Brand)
 Detail.hasMany(BasketDetail)
 BasketDetail.belongsTo(Detail)
 
-Detail.hasMany(DetailInfo)
+Detail.hasMany(DetailInfo, {as: 'info'})
 DetailInfo.belongsTo(Detail)
 
 Type.belongsToMany(Brand, { through: TypeBrand })
